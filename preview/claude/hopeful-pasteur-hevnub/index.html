@@ -10,12 +10,21 @@
 <meta name="description" content="Ski 3000 : descente de ski infinie, un doigt, 60 secondes.">
 <title>Ski 3000</title>
 <link rel="stylesheet" href="style.css">
+<!-- integrity : le navigateur refuse three si le CDN sert autre chose que ces octets exacts.
+     Hash calculé sur le tarball npm officiel de three 0.186.0. Chrome 127, Firefox 138 et
+     Safari 18.4 l'appliquent, les versions d'avant ignorent la clé sans broncher. -->
 <script type="importmap">
-{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js" } }
+{
+  "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js" },
+  "integrity": {
+    "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js": "sha384-m8JoFX52V6NGv2usipnlLJKnJfL7IE8dbniPDDCSGSQv3Hm4n6PjfV6syVwfuoRc"
+  }
+}
 </script>
 </head>
 <body>
 <canvas id="game"></canvas>
+<div id="panne" hidden>Ski 3000 n'a pas pu charger son moteur 3D.<br>Vérifie ta connexion et recharge la page.</div>
 
 <div id="hud" hidden>
   <div class="hud-row">
@@ -80,6 +89,8 @@
   </div>
 </section>
 
-<script type="module" src="main.js"></script>
+<!-- Si le module ne charge pas (CDN muet, hash qui ne correspond plus, hors ligne), la page
+     reste blanche et muette : c'est le piège numéro 1 du projet. Ces lignes disent au moins quoi. -->
+<script type="module" src="main.js" onerror="document.getElementById('panne').hidden = false"></script>
 </body>
 </html>

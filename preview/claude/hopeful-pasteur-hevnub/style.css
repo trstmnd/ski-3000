@@ -45,6 +45,23 @@ html, body {
   touch-action: none;
 }
 
+/* Message de panne : seul texte qui peut s'afficher sans que le moteur ait démarré. */
+#panne {
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #fff;
+  background: #1E2A6E;
+}
+#panne[hidden] { display: none; }
+
 /* Vignette : les bords de l'image s'assombrissent, comme un objectif. Trois lignes de CSS qui
    donnent de la profondeur à une image sans post-traitement, et qui ne coûtent rien au GPU du
    téléphone. Elle est sous le HUD et sous les zones, donc elle n'assombrit jamais le texte. */
