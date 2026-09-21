@@ -3,7 +3,7 @@
 Descente de ski infinie, vue 3/4 arrière, un doigt, 60 secondes. Tu tiens ta ligne, tu prends les
 tremplins, tu essaies d'aller le plus loin possible. Virer freine : c'est tout l'arbitrage du jeu.
 
-**Jouer** : https://trstmnd.github.io/houle/
+**Jouer** : https://trstmnd.github.io/ski-3000/
 
 L'adresse garde le mot `houle`, nom du dépôt à sa création. La renommer casserait le lien déjà
 partagé, c'est la seule raison pour laquelle il reste.

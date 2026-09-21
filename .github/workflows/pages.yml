@@ -26,10 +26,10 @@ jobs:
         run: |
           if [ "$GITHUB_REF_NAME" = "main" ]; then
             echo "dir=" >> "$GITHUB_OUTPUT"
-            echo "url=https://trstmnd.github.io/houle/" >> "$GITHUB_OUTPUT"
+            echo "url=https://trstmnd.github.io/ski-3000/" >> "$GITHUB_OUTPUT"
           else
             echo "dir=preview/$GITHUB_REF_NAME" >> "$GITHUB_OUTPUT"
-            echo "url=https://trstmnd.github.io/houle/preview/$GITHUB_REF_NAME/" >> "$GITHUB_OUTPUT"
+            echo "url=https://trstmnd.github.io/ski-3000/preview/$GITHUB_REF_NAME/" >> "$GITHUB_OUTPUT"
           fi
       - uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:

@@ -601,7 +601,7 @@ Blocs, dans l'ordre, un push par bloc :
 4. Merge sur `main`, test du lien public sur 2 téléphones, envoi.
 
 **Definition of done** :
-- Le lien `https://trstmnd.github.io/houle/?seed=NNNNNN` ouvre la même piste sur 2 téléphones différents.
+- Le lien `https://trstmnd.github.io/ski-3000/?seed=NNNNNN` ouvre la même piste sur 2 téléphones différents.
 - Le partage ouvre la feuille native sur téléphone.
 - Le son marche après le premier tap sur iOS.
 - Le lien est parti à des potes. C'est le seul critère de succès du week-end.
@@ -612,18 +612,18 @@ Jouable au doigt sur iOS et Android · 60 s · rotation et réception · seed da
 
 ## 12. Pipeline téléphone
 
-Le code fait foi sur GitHub : `trstmnd/houle`, public. Le Drive n'est qu'un clone.
+Le code fait foi sur GitHub : `trstmnd/ski-3000`, public. Le Drive n'est qu'un clone.
 
 | Événement | Ce qui se passe | URL |
 |---|---|---|
-| Push sur n'importe quelle branche | Actions : `check.sh`, puis `game/` publié sur `gh-pages` dans `preview/<branche>/`. Rouge = rien ne part | `https://trstmnd.github.io/houle/preview/<branche>/` |
-| Push sur `main` | Idem, à la racine du site (le contenu de `game/` directement) | `https://trstmnd.github.io/houle/` |
+| Push sur n'importe quelle branche | Actions : `check.sh`, puis `game/` publié sur `gh-pages` dans `preview/<branche>/`. Rouge = rien ne part | `https://trstmnd.github.io/ski-3000/preview/<branche>/` |
+| Push sur `main` | Idem, à la racine du site (le contenu de `game/` directement) | `https://trstmnd.github.io/ski-3000/` |
 
 Délai : environ 60 s après le push. L'URL de preview d'une branche ne change pas pendant toute la session : Tristan la garde ouverte et recharge.
 
 ### La boucle, depuis le téléphone
 
-1. Claude Code (app Claude, onglet Code, dépôt `trstmnd/houle`, modèle Opus 5) : « Session 1 ».
+1. Claude Code (app Claude, onglet Code, dépôt `trstmnd/ski-3000`, modèle Opus 5) : « Session 1 ».
 2. L'agent code un bloc, `sh check.sh`, commit, push, **donne l'URL de preview de sa branche**.
 3. Tristan ouvre l'URL, joue, dit une sensation. Jamais deux fonctionnalités sans tester entre les deux.
 4. Fin de session : « merge ». L'agent ouvre la PR, Tristan la fusionne depuis l'app GitHub, `main` se déploie.
